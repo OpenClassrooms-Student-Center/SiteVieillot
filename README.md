@@ -24,6 +24,12 @@ $ vagrant ssh production
 ## Installation
 
 Install dependancies : 
+ 
+### the first time 
+```bash
+$ sudo composer self-update
+$ composer update -n # due to CVE-2019-18889, CVE-2019-18888, CVE-2019-18887, CVE-2019-18886, CVE-2019-11325
+```
 
 ```bash
 $ composer install -n 
