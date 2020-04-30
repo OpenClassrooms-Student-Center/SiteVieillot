@@ -28,9 +28,8 @@ Vagrant.configure("2") do |config|
     apt-get install gitlab-runner -y
     # Install requirements for Symfony
     apt install -y php php-bcmath php-cli php-curl php-zip php-sqlite3 php-mysql php-xml php-mbstring
-    wget https://getcomposer.org/composer.phar
-    mv composer.phar /usr/bin/composer
-    chmod +x /usr/bin/composer
+    curl -sS https://getcomposer.org/installer -o composer-setup.php
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer
  SHELL
 end
 
